@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UnRestaurantPage implements OnInit {
   title : any;
   infos : any;
+  img : any;
 
   constructor(private route: ActivatedRoute, private router: Router) {
     this.route.queryParamMap.subscribe((params) => {
@@ -16,6 +17,7 @@ export class UnRestaurantPage implements OnInit {
       if (navigationExtras && navigationExtras.state) {
         this.infos = navigationExtras['state']['info'];
         this.title = navigationExtras['state']['title'];
+        this.img = navigationExtras['state']['img'];
       }
     });
   }

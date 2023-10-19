@@ -15,7 +15,11 @@
     </a>
   </div>
   <div class="container">
-    <ion-button class="btn" *ngFor="let item of menu" (click)="goToBateau(item.title,item.info)"> {{item.title}}</ion-button>
+    <ion-button class="btn" *ngFor="let item of menu" (click)="goToBateau(item.title,item.info,item.img)"> 
+      <img src={{item.img}}/>
+      {{item.title}}
+    </ion-button>
+    <ion-button class="btn" (click)="goToContact()">Contact</ion-button>
   </div>
 </ion-content>
 
