@@ -2,21 +2,18 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: 'home.page.html',
-    styleUrls: ['home.page.scss'],
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-    
+  constructor(private router: Router) {}
 
-
-  constructor(private router: Router) {
-
+  onGoToListeRestaurants() {
+    this.router.navigate(['/restaurants']);
   }
 
-
-
-    onGoToListeRestaurants(){
-      this.router.navigate(['/restaurants']);
-    }
+  onGoToMenu(){
+    this.router.navigate(['/menu']);
+  }
 }

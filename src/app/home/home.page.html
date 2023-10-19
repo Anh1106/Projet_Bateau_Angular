@@ -1,7 +1,6 @@
-
 <ion-content>
-	<div id="container">
-		<ion-grid>
+  <div id="container">
+    <ion-grid>
       <div class="ion-text-center">
         <ion-row>
           <ion-col></ion-col>
@@ -11,59 +10,47 @@
           <ion-col></ion-col>
         </ion-row>
       </div>
-			<ion-row>
-				<ion-col>
-					<div>
-						<p>Vente en direct de notre bateau</p>
-						<p>Produits selon la saison, Livraison sur Paris</p>
-						<a href="tel:06.63.99.99.78">06.63.99.99.78</a>
-						<a href="www.facebook/lebateaudethibaut" target="_blank">
-							www.facebook/lebateaudethibaut
-						</a>
-					</div>
-				</ion-col>
-			</ion-row>
+      <ion-row>
+        <ion-col>
+          <div>
+            <p>Vente en direct de notre bateau</p>
+            <p>Produits selon la saison, Livraison sur Paris</p>
+            <a href="tel:06.63.99.99.78">06.63.99.99.78</a>
+            <a href="www.facebook/lebateaudethibaut" target="_blank">
+              www.facebook/lebateaudethibaut
+            </a>
+          </div>
+        </ion-col>
+      </ion-row>
 
       <div class="ion-text-center">
         <ion-row class="ion-margin-top">
           <ion-col></ion-col>
-          <ion-col size="8"
-            ><ion-button color="danger" expand="block">Produits et
-              Promos</ion-button
-            ></ion-col>
+          <ion-col size="8"><ion-button color="danger" expand="block" (click)="onGoToMenu()" >Produits et
+              Promos</ion-button></ion-col>
           <ion-col></ion-col>
         </ion-row>
         <ion-row>
           <ion-col></ion-col>
           <ion-col size="4">
-            <ion-button expand="block" (click)="onGoToListeRestaurants()"
-              >Restaurant</ion-button
-            >
+            <ion-button expand="block" (click)="onGoToListeRestaurants()">Restaurant</ion-button>
           </ion-col>
-          <ion-col size="4"
-            ><ion-button expand="block"
-              >Recette</ion-button
-            >
+          <ion-col size="4"><ion-button expand="block">Recette</ion-button>
           </ion-col>
           <ion-col></ion-col>
         </ion-row>
-        
+
         <ion-row>
           <ion-col></ion-col>
           <ion-col size="4">
-            <ion-button expand="block"
-              >Bateaux</ion-button
-            >
+            <ion-button expand="block">Bateaux</ion-button>
           </ion-col>
-          <ion-col size="4"
-            ><ion-button expand="block"
-              >Contact</ion-button
-            >
+          <ion-col size="4"><ion-button expand="block">Contact</ion-button>
           </ion-col>
           <ion-col></ion-col>
         </ion-row>
       </div>
-			
-		</ion-grid>
-	</div>
+
+    </ion-grid>
+  </div>
 </ion-content>
