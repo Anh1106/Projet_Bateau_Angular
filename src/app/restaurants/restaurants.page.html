@@ -1,61 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Restaurants</ion-title>
+    <ion-title>Menu</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
-<ion-content>
-  <ion-title class="titre ion-text-center"> restaurants partenaires </ion-title>
-
-  <ion-text class="titre ion-text-center" color="secondary">
-    <h2 class="t2">
-      Tous les restaurants partenaires avec le Bateau de Thibault
-    </h2>
-  </ion-text>
-  
-
-  <ion-grid>
-    <div class="bateaux bateaux-button ion-text-center">
-      <ion-row class="ion-margin-top">
-        <ion-col></ion-col>
-        <ion-col size="4">
-          <ion-button (click)="onGoToUnRestaurant()" color="secondary" expand="block"
-            >Bistrot des Gascons</ion-button
-          >
-        </ion-col>
-        <ion-col size="4"
-          ><ion-button color="primary" expand="block"
-            >Les fous de l'ile</ion-button
-          >
-        </ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col></ion-col>
-        <ion-col size="4">
-          <ion-button color="danger" expand="block">Bistrot Landais</ion-button>
-        </ion-col>
-        <ion-col size="4"
-          ><ion-button color="success" expand="block">Villa 9-Trois</ion-button>
-        </ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col></ion-col>
-        <ion-col size="4">
-          <ion-button color="medium" expand="block"
-            >Bistrot du Sommelier</ion-button
-          >
-        </ion-col>
-        <ion-col size="4"
-          ><ion-button class="partenaire" color="warning" expand="block"
-            >Devenez partenaire</ion-button
-          >
-        </ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-    </div>
-  </ion-grid>
+<ion-content [fullscreen]="true">
+  <p class="title">Choissisez vos produits</p>
+  <div class="container">
+    <ion-button class="btn" *ngFor="let item of menu" (click)="goToResto(item.title,item.info)"> {{item.title}}</ion-button>
+  </div>
 </ion-content>
-*/
