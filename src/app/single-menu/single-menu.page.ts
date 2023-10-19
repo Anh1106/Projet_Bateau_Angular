@@ -18,5 +18,14 @@ export class SingleMenuPage implements OnInit {
     });
   }
 
+  addToCard(plat: any) {
+    const index = this.plats.findIndex((p) => p === plat);
+
+    if (index !== -1) {
+      this.plats[index].purchase = !this.plats[index].purchase;
+    }
+
+  }
+
   ngOnInit() {}
 }
