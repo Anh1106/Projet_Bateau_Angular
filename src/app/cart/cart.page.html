@@ -9,9 +9,11 @@
   </div>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <p class="title">Choissisez vos produits</p>
-  <div class="container">
-    <ion-button class="btn" *ngFor="let item of menu" (click)="goToPlats(item.plats)"> {{item.title}}</ion-button>
-  </div>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">cart</ion-title>
+    </ion-toolbar>
+  </ion-header>
 </ion-content>

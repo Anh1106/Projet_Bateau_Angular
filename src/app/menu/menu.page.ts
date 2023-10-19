@@ -7,7 +7,8 @@ import { NavigationExtras, Router } from '@angular/router';
   styleUrls: ['./menu.page.scss'],
 })
 export class MenuPage implements OnInit {
-  menu = [
+
+   menu = [
     {
       title: 'Poissons',
       plats: [

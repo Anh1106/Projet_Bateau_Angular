@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SingleMenuPage implements OnInit {
   plats: Array<{ name: string; price: number; purchase: boolean }> = [];
+  purchasedPlats: Array<{ name: string; price: number; purchase: boolean }> = [];
 
   constructor(private route: ActivatedRoute, private router: Router) {
     this.route.queryParamMap.subscribe((params) => {
@@ -23,9 +24,21 @@ export class SingleMenuPage implements OnInit {
 
     if (index !== -1) {
       this.plats[index].purchase = !this.plats[index].purchase;
-    }
 
+      if (this.plats[index].purchase) {
+        // Si le produit est acheté (purchase = true), ajoutez-le à purchasedPlats
+        this.purchasedPlats.push(this.plats[index]);
+      } else {
+        // Si le produit n'est plus acheté (purchase = false), retirez-le de purchasedPlats
+        const purchasedIndex = this.purchasedPlats.findIndex((p) => p === plat);
+        if (purchasedIndex !== -1) {
+          this.purchasedPlats.splice(purchasedIndex, 1);
+        }
+      }
+    }
+    // console.log(this.purchasedPlats);
   }
+
 
   ngOnInit() {}
 }
