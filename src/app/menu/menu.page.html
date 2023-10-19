@@ -5,5 +5,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <p>Choissisez vos produits</p>
+  <p class="title">Choissisez vos produits</p>
+  <div class="container">
+    <ion-button class="btn" *ngFor="let item of menu"> {{item.title}}</ion-button>
+  </div>
 </ion-content>
