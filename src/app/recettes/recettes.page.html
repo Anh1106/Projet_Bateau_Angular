@@ -5,18 +5,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="container">
-    <p class="title">Toutes les recettes du bateau de Thibault</p>
-    <a href="tel:06.63.99.99.78">06.63.99.99.78</a>
+  <div style="background-image: url('../../assets/images/background.png'); background-size: cover;">
+    <div class="container">
+      <p class="title">Toutes les recettes du bateau de Thibault</p>
+      <a href="tel:06.63.99.99.78">06.63.99.99.78</a>
       <a href="www.facebook/lebateaudethibaut" target="_blank">
         www.facebook/lebateaudethibaut
       </a>
       <br>
     </div>
-  <div class="container">
-    <ion-button class="btn" *ngFor="let item of menu" (click)="goToRecette(item.title,item.info,item.img)"> 
-      <img src={{item.img}} />
-      {{item.title}}</ion-button>
+    <div class="container">
+      <ion-button class="btn" *ngFor="let item of menu" (click)="goToRecette(item.title,item.info,item.img)">
+        <img src={{item.img}} />
+        {{item.title}}</ion-button>
+    </div>
   </div>
 </ion-content>
-
