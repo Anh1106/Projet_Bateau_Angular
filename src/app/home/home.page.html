@@ -1,20 +1,69 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+	<div id="container">
+		<ion-grid>
+      <div class="ion-text-center">
+        <ion-row>
+          <ion-col></ion-col>
+          <ion-col size="8">
+            <h1 class="titre">Le Bateau de Thibault</h1>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+      </div>
+			<ion-row>
+				<ion-col>
+					<div>
+						<p>Vente en direct de notre bateau</p>
+						<p>Produits selon la saison, Livraison sur Paris</p>
+						<a href="tel:06.63.99.99.78">06.63.99.99.78</a>
+						<a href="www.facebook/lebateaudethibaut" target="_blank">
+							www.facebook/lebateaudethibaut
+						</a>
+					</div>
+				</ion-col>
+			</ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <div class="ion-text-center">
+        <ion-row class="ion-margin-top">
+          <ion-col></ion-col>
+          <ion-col size="8"
+            ><ion-button color="danger" expand="block">Produits et
+              Promos</ion-button
+            ></ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col></ion-col>
+          <ion-col size="4">
+            <ion-button expand="block" (click)="onGoToListeRestaurants()"
+              >Restaurant</ion-button
+            >
+          </ion-col>
+          <ion-col size="4"
+            ><ion-button expand="block"
+              >Recette</ion-button
+            >
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col></ion-col>
+          <ion-col size="4">
+            <ion-button expand="block"
+              >Bateaux</ion-button
+            >
+          </ion-col>
+          <ion-col size="4"
+            ><ion-button expand="block"
+              >Contact</ion-button
+            >
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+      </div>
+			
+		</ion-grid>
+	</div>
 </ion-content>
