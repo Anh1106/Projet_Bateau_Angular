@@ -1,12 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Menu</ion-title>
+    <ion-title>Restaurants partenaire</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <p class="title">Choissisez vos produits</p>
   <div class="container">
-    <ion-button class="btn" *ngFor="let item of menu" (click)="goToResto(item.title,item.info)"> {{item.title}}</ion-button>
+  <p class="title">Tous les restaurants partenaires avec le bateau de Thibault</p>
+  <a href="tel:06.63.99.99.78">06.63.99.99.78</a>
+    <a href="www.facebook/lebateaudethibaut" target="_blank">
+      www.facebook/lebateaudethibaut
+    </a>
+    <br>
+  </div>
+  <div class="container">
+    <ion-button class="btn" *ngFor="let item of menu" (click)="goToResto(item.title,item.info,item.img)"> 
+      {{item.title}}
+    </ion-button>
+    <ion-button class="btn" (click)="goToContact()">Devenez Partenaires
+    </ion-button>
   </div>
 </ion-content>
