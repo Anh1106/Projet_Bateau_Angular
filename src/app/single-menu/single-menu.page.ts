@@ -19,7 +19,7 @@ export class SingleMenuPage implements OnInit {
     });
   }
 
-  addToCard(plat: any) {
+  addToCart(plat: any) {
     const index = this.plats.findIndex((p) => p === plat);
 
     if (index !== -1) {
