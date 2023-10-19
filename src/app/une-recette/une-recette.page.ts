@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-un-restaurant',
-  templateUrl: './un-restaurant.page.html',
-  styleUrls: ['./un-restaurant.page.scss'],
+  selector: 'app-une-recette',
+  templateUrl: './une-recette.page.html',
+  styleUrls: ['./une-recette.page.scss'],
 })
-export class UnRestaurantPage implements OnInit {
+export class UneRecettePage implements OnInit {
   title : any;
   infos : any;
 
@@ -22,4 +22,3 @@ export class UnRestaurantPage implements OnInit {
 
   ngOnInit() {}
 }
-

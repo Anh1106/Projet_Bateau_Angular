@@ -2,42 +2,54 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-restaurants',
-  templateUrl: './restaurants.page.html',
-  styleUrls: ['./restaurants.page.scss'],
+  selector: 'app-bateaux',
+  templateUrl: './bateaux.page.html',
+  styleUrls: ['./bateaux.page.scss'],
 })
-export class RestaurantsPage implements OnInit {
+export class BateauxPage implements OnInit {
   menu = [
     {
-      title: 'Bistrot Landais',
+      title: 'De la Brise',
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis enim non lacinia ultricies. Vivamus libero nisl, dapibus nec ex vitae, laoreet ullamcorper purus. Etiam tincidunt, velit a rhoncus sodales, libero orci iaculis elit, quis accumsan erat justo sit amet justo. Pellentesque vel scelerisque augue. Integer eros arcu, facilisis vitae sem a, tempor vehicula eros. Maecenas dignissim eget mauris eu auctor. Phasellus pulvinar, diam at fringilla efficitur, nibh purus bibendum diam, at tempus magna eros et ligula. Maecenas placerat luctus purus et vestibulum. Cras quis libero erat. Donec in tellus ex. Curabitur scelerisque eros sit amet tempus interdum. Vestibulum nec eros neque.",
     },
     {
-      title: 'Bistrot Landais',
+      title: 'Saphir',
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis enim non lacinia ultricies. Vivamus libero nisl, dapibus nec ex vitae, laoreet ullamcorper purus. Etiam tincidunt, velit a rhoncus sodales, libero orci iaculis elit, quis accumsan erat justo sit amet justo. Pellentesque vel scelerisque augue. Integer eros arcu, facilisis vitae sem a, tempor vehicula eros. Maecenas dignissim eget mauris eu auctor. Phasellus pulvinar, diam at fringilla efficitur, nibh purus bibendum diam, at tempus magna eros et ligula. Maecenas placerat luctus purus et vestibulum. Cras quis libero erat. Donec in tellus ex. Curabitur scelerisque eros sit amet tempus interdum. Vestibulum nec eros neque.",
     },
     {
-      title: 'Bistrot des Gascons',
+      title: 'Gast Micher',
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis enim non lacinia ultricies. Vivamus libero nisl, dapibus nec ex vitae, laoreet ullamcorper purus. Etiam tincidunt, velit a rhoncus sodales, libero orci iaculis elit, quis accumsan erat justo sit amet justo. Pellentesque vel scelerisque augue. Integer eros arcu, facilisis vitae sem a, tempor vehicula eros. Maecenas dignissim eget mauris eu auctor. Phasellus pulvinar, diam at fringilla efficitur, nibh purus bibendum diam, at tempus magna eros et ligula. Maecenas placerat luctus purus et vestibulum. Cras quis libero erat. Donec in tellus ex. Curabitur scelerisque eros sit amet tempus interdum. Vestibulum nec eros neque.",
 
     },
     {
-      title: 'Les fous de lîle',
+      title: 'Aquilon',
       info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis enim non lacinia ultricies. Vivamus libero nisl, dapibus nec ex vitae, laoreet ullamcorper purus. Etiam tincidunt, velit a rhoncus sodales, libero orci iaculis elit, quis accumsan erat justo sit amet justo. Pellentesque vel scelerisque augue. Integer eros arcu, facilisis vitae sem a, tempor vehicula eros. Maecenas dignissim eget mauris eu auctor. Phasellus pulvinar, diam at fringilla efficitur, nibh purus bibendum diam, at tempus magna eros et ligula. Maecenas placerat luctus purus et vestibulum. Cras quis libero erat. Donec in tellus ex. Curabitur scelerisque eros sit amet tempus interdum. Vestibulum nec eros neque."
     },
+    {
+      title: 'Contact',
+      info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis enim non lacinia ultricies. Vivamus libero nisl, dapibus nec ex vitae, laoreet ullamcorper purus. Etiam tincidunt, velit a rhoncus sodales, libero orci iaculis elit, quis accumsan erat justo sit amet justo. Pellentesque vel scelerisque augue. Integer eros arcu, facilisis vitae sem a, tempor vehicula eros. Maecenas dignissim eget mauris eu auctor. Phasellus pulvinar, diam at fringilla efficitur, nibh purus bibendum diam, at tempus magna eros et ligula. Maecenas placerat luctus purus et vestibulum. Cras quis libero erat. Donec in tellus ex. Curabitur scelerisque eros sit amet tempus interdum. Vestibulum nec eros neque.",
+
+    },
+    {
+      title: 'Contact',
+      info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis enim non lacinia ultricies. Vivamus libero nisl, dapibus nec ex vitae, laoreet ullamcorper purus. Etiam tincidunt, velit a rhoncus sodales, libero orci iaculis elit, quis accumsan erat justo sit amet justo. Pellentesque vel scelerisque augue. Integer eros arcu, facilisis vitae sem a, tempor vehicula eros. Maecenas dignissim eget mauris eu auctor. Phasellus pulvinar, diam at fringilla efficitur, nibh purus bibendum diam, at tempus magna eros et ligula. Maecenas placerat luctus purus et vestibulum. Cras quis libero erat. Donec in tellus ex. Curabitur scelerisque eros sit amet tempus interdum. Vestibulum nec eros neque."
+    }
+
   ];
 
-  goToResto(title: any,info : any) {
+  goToBateau(title: any,info : any) {
     let navigationExtras: NavigationExtras = {
       state: {
         title: title,
         info: info,
       },
     };
-    this.router.navigate(['/un-restaurant'], navigationExtras);
+    this.router.navigate(['/un-bateau'], navigationExtras);
   }
 
   constructor(private router: Router) {}
 
   ngOnInit() {}
 }
+
+

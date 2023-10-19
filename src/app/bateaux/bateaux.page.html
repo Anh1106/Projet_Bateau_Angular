@@ -1,0 +1,21 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title">Nos bateaux partenaires</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <p>Vente en direct de notre bateau</p>
+    <p>Produits selon la saison, Livraison sur Paris</p>
+    <a href="tel:06.63.99.99.78">06.63.99.99.78</a>
+    <a href="www.facebook/lebateaudethibaut" target="_blank">
+      www.facebook/lebateaudethibaut
+    </a>
+  </div>
+  <div class="container">
+    <ion-button class="btn" *ngFor="let item of menu" (click)="goToBateau(item.title,item.info)"> {{item.title}}</ion-button>
+  </div>
+</ion-content>
+

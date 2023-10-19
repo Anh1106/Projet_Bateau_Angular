@@ -7,6 +7,7 @@
 <ion-content [fullscreen]="true">
   <p class="title">Choissisez vos produits</p>
   <div class="container">
-    <ion-button class="btn" *ngFor="let item of menu" (click)="goToResto(item.title,item.info)"> {{item.title}}</ion-button>
+    <ion-button class="btn" *ngFor="let item of menu" (click)="goToRecette(item.title,item.info)"> {{item.title}}</ion-button>
   </div>
 </ion-content>
+

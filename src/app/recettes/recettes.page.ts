@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-restaurants',
-  templateUrl: './restaurants.page.html',
-  styleUrls: ['./restaurants.page.scss'],
+  selector: 'app-recettes',
+  templateUrl: './recettes.page.html',
+  styleUrls: ['./recettes.page.scss'],
 })
-export class RestaurantsPage implements OnInit {
+export class RecettesPage implements OnInit {
   menu = [
     {
       title: 'Bistrot Landais',
@@ -27,17 +27,18 @@ export class RestaurantsPage implements OnInit {
     },
   ];
 
-  goToResto(title: any,info : any) {
+  goToRecette(title: any,info : any) {
     let navigationExtras: NavigationExtras = {
       state: {
         title: title,
         info: info,
       },
     };
-    this.router.navigate(['/un-restaurant'], navigationExtras);
+    this.router.navigate(['/une-recette'], navigationExtras);
   }
 
   constructor(private router: Router) {}
 
   ngOnInit() {}
 }
+
