@@ -1,13 +1,18 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Single-menu</ion-title>
-  </ion-toolbar>
+  <div >
+      <a href="/home">
+        <img class="logo" src="../../assets/images/homeLogo.png" alt="Home" srcset="">
+      </a>
+      <a href="/cart">
+        <img class="logo" style="float: right;margin-right: 100px;" src="../../assets/images/cartLogo.png" alt="Cart" srcset="">
+      </a>
+  </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <p class="title">Choissisez un plat</p>
   <div class="container">
-    <ion-button class="btn" *ngFor="let plat of plats" (click)="addToCard(plat)"> {{plat.name}} - {{plat.price}}€
+    <ion-button class="btn" *ngFor="let plat of plats" (click)="addToCart(plat)"> {{plat.name}} - {{plat.price}}€
       <span *ngIf="plat.purchase" class="ok-span">OK</span>
     </ion-button>
   </div>
