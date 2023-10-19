@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Single-menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <ion-button class="btn" *ngFor="let plat of plats" > {{plat.name}}</ion-button>
+  </div>
+</ion-content>
+
+<script>
+  console.log(plats);
+</script>

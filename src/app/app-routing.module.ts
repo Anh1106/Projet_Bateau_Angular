@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'single-menu',
+    loadChildren: () => import('./single-menu/single-menu.module').then( m => m.SingleMenuPageModule)
+  },
 ];
 
 @NgModule({
