@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <p class="title">Choissisez vos produits</p>
+  <div class="container">
+    <ion-button class="btn" *ngFor="let item of menu" (click)="goToRecette(item.title,item.info)"> {{item.title}}</ion-button>
+  </div>
+</ion-content>
+

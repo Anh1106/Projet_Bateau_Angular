@@ -27,6 +27,26 @@ const routes: Routes = [
     path: 'single-menu',
     loadChildren: () => import('./single-menu/single-menu.module').then( m => m.SingleMenuPageModule)
   },
+  {
+    path: 'recettes',
+    loadChildren: () => import('./recettes/recettes.module').then( m => m.RecettesPageModule)
+  },
+  {
+    path: 'bateaux',
+    loadChildren: () => import('./bateaux/bateaux.module').then( m => m.BateauxPageModule)
+  },
+  {
+    path: 'un-bateau',
+    loadChildren: () => import('./un-bateau/un-bateau.module').then( m => m.UnBateauPageModule)
+  },
+  {
+    path: 'une-recette',
+    loadChildren: () => import('./une-recette/une-recette.module').then( m => m.UneRecettePageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
 ];
 
 @NgModule({

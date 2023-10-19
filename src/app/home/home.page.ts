@@ -11,6 +11,18 @@ export class HomePage {
 
   onGoToListeRestaurants() {
     this.router.navigate(['/restaurants']);
+    console.log("hello resto")
+  }
+
+  onGoToListeBateaux() {
+    this.router.navigate(['/bateaux']);
+    console.log("hello bato")
+  }
+  onGoToListeRecettes() {
+    this.router.navigate(['/recettes']);
+  }
+  onGoToContact() {
+    this.router.navigate(['/contact']);
   }
 
   onGoToMenu(){
