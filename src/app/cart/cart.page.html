@@ -11,7 +11,21 @@
 
 
 <ion-content [fullscreen]="true">
-  <div style="background-image: url('../../assets/images/background.png'); background-size: cover; height: 100vh;">
-
+  <p class="title">Produits achetés</p>
+  <div class="container">
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Nom du plat</th>
+          <th>Prix (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let plat of purchasedPlats">
+          <td>{{ plat.name }}</td>
+          <td>{{ plat.price }}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </ion-content>

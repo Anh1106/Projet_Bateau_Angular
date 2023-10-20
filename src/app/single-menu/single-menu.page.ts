@@ -37,7 +37,7 @@ export class SingleMenuPage implements OnInit {
 
       localStorage.setItem('purchasedPlats', JSON.stringify(this.purchasedPlats));
     }
-    console.log(this.purchasedPlats);
+    // console.log(this.purchasedPlats);
   }
 
 
