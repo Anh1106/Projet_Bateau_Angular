@@ -18,12 +18,14 @@
         <tr>
           <th>Nom du plat</th>
           <th>Prix (€)</th>
+          <th>Quantity</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let plat of purchasedPlats">
           <td>{{ plat.name }}</td>
           <td>{{ plat.price }}</td>
+          <td>{{ plat.quantity }}</td>
         </tr>
       </tbody>
     </table>

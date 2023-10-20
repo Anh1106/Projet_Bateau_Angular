@@ -7,8 +7,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./single-menu.page.scss'],
 })
 export class SingleMenuPage implements OnInit {
-  plats: Array<{ name: string; price: number; purchase: boolean }> = [];
-  purchasedPlats: Array<{ name: string; price: number; purchase: boolean }> =
+  plats: Array<{ name: string; price: number; purchase: boolean;quantity:number }> = [];
+  purchasedPlats: Array<{ name: string; price: number; purchase: boolean;quantity:number }> =
     [];
 
   constructor(private route: ActivatedRoute, private router: Router) {
@@ -25,26 +25,31 @@ export class SingleMenuPage implements OnInit {
 
     if (index !== -1) {
       const isAlreadyPurchased = this.isProductPurchased(plat);
-
+      let purchasedIndex = -1;
       if (isAlreadyPurchased) {
-        const purchasedIndex = this.purchasedPlats.findIndex((p) => p.name === plat.name);
+        purchasedIndex = this.purchasedPlats.findIndex(
+          (p) => p.name === plat.name
+        );
         if (purchasedIndex !== -1) {
           this.purchasedPlats.splice(purchasedIndex, 1);
         }
       } else {
-        this.purchasedPlats.push(this.plats[index]);
+        this.purchasedPlats.push({ ...this.plats[index], quantity: 1 });
       }
 
-      localStorage.setItem('purchasedPlats', JSON.stringify(this.purchasedPlats));
+      localStorage.setItem(
+        'purchasedPlats',
+        JSON.stringify(this.purchasedPlats)
+      );
     }
-    // console.log(this.purchasedPlats);
+    console.log(this.purchasedPlats);
   }
-
 
   isProductPurchased(plat: any): boolean {
-    return this.purchasedPlats.some((purchasedPlat) => purchasedPlat.name === plat.name);
+    return this.purchasedPlats.some(
+      (purchasedPlat) => purchasedPlat.name === plat.name
+    );
   }
-
 
   ngOnInit() {
     const purchasedPlatsStr = localStorage.getItem('purchasedPlats');

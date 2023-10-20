@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.page.scss'],
 })
 export class CartPage implements OnInit {
-  purchasedPlats: Array<{ name: string; price: number; purchase: boolean }> = [];
+  purchasedPlats: Array<{ name: string; price: number; purchase: boolean;quantity:number }> = [];
 
   constructor() { }
 
