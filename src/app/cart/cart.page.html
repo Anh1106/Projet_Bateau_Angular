@@ -1,11 +1,12 @@
 <ion-header [translucent]="true">
   <div style="background-image: url(../../assets/images/logo/header.png); background-size: cover;">
-      <a href="/home">
-        <img class="logo" src="../../assets/images/homeLogo.png"  alt="Home" srcset="">
-      </a>
-      <a href="/cart">
-        <img class="logo" style="float: right;margin-right: 100px;" src="../../assets/images/cartLogo.png" alt="Cart" srcset="">
-      </a>
+    <a href="/home">
+      <img class="logo" src="../../assets/images/homeLogo.png" alt="Home" srcset="">
+    </a>
+    <a href="/cart">
+      <img class="logo" style="float: right;margin-right: 100px;" src="../../assets/images/cartLogo.png" alt="Cart"
+        srcset="">
+    </a>
   </div>
 </ion-header>
 
@@ -30,4 +31,9 @@
       </tbody>
     </table>
   </div>
+  <h3 style="text-align: right; margin-right: 50px;">Total: <span> {{totalPrice}}€</span></h3>
+  <p style="margin-left: 20px;">Lieu de livraison (choisir):</p>
+  <div style="margin-left: 30px;">Bistrot des Gascons <br> 26 Avenue de Tourville, 75007 Paris</div>
+  <p>Date de livraison :</p>
+  <div style="margin-left: 30px;">Samedi 16 Mars, à partir de 9h</div>
 </ion-content>
