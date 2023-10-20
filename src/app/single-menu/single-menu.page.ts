@@ -8,7 +8,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SingleMenuPage implements OnInit {
   plats: Array<{ name: string; price: number; purchase: boolean }> = [];
-  purchasedPlats: Array<{ name: string; price: number; purchase: boolean }> = [];
+  purchasedPlats: Array<{ name: string; price: number; purchase: boolean }> =
+    [];
 
   constructor(private route: ActivatedRoute, private router: Router) {
     this.route.queryParamMap.subscribe((params) => {
@@ -23,22 +24,32 @@ export class SingleMenuPage implements OnInit {
     const index = this.plats.findIndex((p) => p === plat);
 
     if (index !== -1) {
-      this.plats[index].purchase = !this.plats[index].purchase;
+      const isAlreadyPurchased = this.isProductPurchased(plat);
 
-      if (this.plats[index].purchase) {
-        // Si le produit est acheté (purchase = true), ajoutez-le à purchasedPlats
-        this.purchasedPlats.push(this.plats[index]);
-      } else {
-        // Si le produit n'est plus acheté (purchase = false), retirez-le de purchasedPlats
-        const purchasedIndex = this.purchasedPlats.findIndex((p) => p === plat);
+      if (isAlreadyPurchased) {
+        const purchasedIndex = this.purchasedPlats.findIndex((p) => p.name === plat.name);
         if (purchasedIndex !== -1) {
           this.purchasedPlats.splice(purchasedIndex, 1);
         }
+      } else {
+        this.purchasedPlats.push(this.plats[index]);
       }
+
+      localStorage.setItem('purchasedPlats', JSON.stringify(this.purchasedPlats));
     }
-    // console.log(this.purchasedPlats);
+    console.log(this.purchasedPlats);
   }
 
 
-  ngOnInit() {}
+  isProductPurchased(plat: any): boolean {
+    return this.purchasedPlats.some((purchasedPlat) => purchasedPlat.name === plat.name);
+  }
+
+
+  ngOnInit() {
+    const purchasedPlatsStr = localStorage.getItem('purchasedPlats');
+    if (purchasedPlatsStr) {
+      this.purchasedPlats = JSON.parse(purchasedPlatsStr);
+    }
+  }
 }

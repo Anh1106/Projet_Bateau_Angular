@@ -10,12 +10,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <p class="title">Choissisez un plat</p>
+  <p class="title">Choisissez un plat</p>
   <div class="container">
-    <ion-button class="btn" *ngFor="let plat of plats" (click)="addToCart(plat)"> {{plat.name}} - {{plat.price}}€
-      <span *ngIf="plat.purchase" class="ok-span">OK</span>
+    <ion-button class="btn" *ngFor="let plat of plats" (click)="addToCart(plat)">
+      {{ plat.name }} - {{ plat.price }}€
+      <span *ngIf="isProductPurchased(plat)" class="ok-span">OK</span>
     </ion-button>
   </div>
 </ion-content>
+
 
 
